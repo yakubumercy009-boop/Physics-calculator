@@ -1,0 +1,67 @@
+
+def pressure():
+    force = float(input("Enter force: "))
+    area = float(input("Enter area: "))
+    print("Pressure:", force / area, "Pa")
+
+
+def momentum():
+    mass = float(input("Enter mass: "))
+    velocity = float(input("Enter velocity: "))
+    print("Momentum:", mass * velocity, "kg m/s")
+
+
+def work_done():
+    force = float(input("Enter force: "))
+    distance = float(input("Enter distance: "))
+    print("Work Done:", force * distance, "J")
+
+
+def potential_energy():
+    mass = float(input("Enter mass: "))
+    height = float(input("Enter height: "))
+    gravity = 9.8
+    print("Potential Energy:", mass * gravity * height, "J")
+
+
+def power():
+    work = float(input("Enter work done: "))
+    time = float(input("Enter time: "))
+    print("Power:", work / time, "W")
+
+
+while True:
+    print("\nPHYSICS CALCULATOR")
+    print("1. Pressure")
+    print("2. Momentum")
+    print("3. Work Done")
+    print("4. Potential Energy")
+    print("5. Power")
+
+    choice = input("Choose an operation (1-5): ")
+
+    if choice == "1":
+        pressure()
+
+    elif choice == "2":
+        momentum()
+
+    elif choice == "3":
+        work_done()
+
+    elif choice == "4":
+        potential_energy()
+
+    elif choice == "5":
+        power()
+
+    else:
+        print("Invalid choice")
+
+    answer = input("Do you want to continue? (Yes/No): ").lower()
+
+    if answer == "no":
+        print("Thank you for using the Physics Calculator!")
+        break
+
+    
